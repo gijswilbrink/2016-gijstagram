@@ -8,6 +8,10 @@ import React from 'react';
  */
 import Photo from './Photo';
 
+/**
+ * Component: PhotoGrid
+ * Renders all photos and calls <Photo /> component for each photo
+ */
 const PhotoGrid = React.createClass({
 	render() {
 		return (
@@ -18,4 +22,7 @@ const PhotoGrid = React.createClass({
 	}
 });
 
+/**
+ * Export
+ */
 export default PhotoGrid

@@ -1,6 +1,13 @@
+/**
+ * Import framework
+ */
 import React from 'react';
 import { Link } from 'react-router';
 
+/**
+ * Component: Main
+ * Renders pages requested by the router
+ */
 const Main = React.createClass({
 	render() {
 		return (
@@ -14,4 +21,7 @@ const Main = React.createClass({
 	}
 });
 
+/**
+ * Export
+ */
 export default Main;

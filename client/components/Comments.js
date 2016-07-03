@@ -4,13 +4,15 @@
 import React from 'react';
 
 /**
- * Import components
+ * Component: Comments
+ * Renders a comment form and all added comments
  */
-
 const Comments = React.createClass({
 
+	/**
+	 * Render a single comment
+	 */
 	renderComment(comment, i) {
-
 		return (
 			<div className="comment" key={i}>
 				<p>
@@ -22,7 +24,9 @@ const Comments = React.createClass({
 		);
 	},
 
-
+	/**
+	 * Submit the comment form
+	 */
 	handleSubmit(e) {
 		// don't refresh
 		e.preventDefault();
@@ -35,6 +39,9 @@ const Comments = React.createClass({
 		this.refs.commentForm.reset();
 	},
 
+	/**
+	 * Render the comments and comment form
+	 */
 	render() {
 		return (
 			<div className="comments">
@@ -49,4 +56,7 @@ const Comments = React.createClass({
 	}
 });
 
+/**
+ * Export
+ */
 export default Comments

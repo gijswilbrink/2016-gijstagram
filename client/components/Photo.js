@@ -1,7 +1,14 @@
+/**
+ * Import framework
+ */
 import React from 'react';
 import { Link } from 'react-router';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
+/**
+ * Component: Photo
+ * Renders a single photo
+ */
 const Photo = React.createClass({
 	render() {
 		const { post, i, comments } = this.props;
@@ -39,4 +46,7 @@ const Photo = React.createClass({
 	}
 });
 
+/**
+ * Export
+ */
 export default Photo;

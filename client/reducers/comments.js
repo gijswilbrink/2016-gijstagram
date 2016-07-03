@@ -1,9 +1,17 @@
+/**
+ * Post comments reducer
+ * @param 	state 	the current state
+ * @param 	action 	the called action
+ * @return 	state	the new state
+ */
 function postComments(state = [], action) {
 	const i = action.index;
 
+	// Check which action was called
 	switch(action.type) {
+		// Add a comment
 		case 'ADD_COMMENT' :
-			// return the existing state plus the new comment
+			// Return the existing state plus the new comment
 			return [
 				...state,
 				{
@@ -12,6 +20,7 @@ function postComments(state = [], action) {
 				}
 			];
 		
+		// Remove a comment
 		case 'REMOVE_COMMENT' :
 			// return the existing state without the given comment
 			return [
@@ -19,12 +28,20 @@ function postComments(state = [], action) {
 				...state.slice(i + 1)
 			]
 
+		// Action wasn't meant for this reducer
 		default:
 			return state;		
 	}
 	
 }
 
+/**
+ * Comments reducer
+ * Calls the postComments() subreducer
+ * @param 	state 	the current state
+ * @param 	action 	the called action
+ * @return 	state	the new state
+ */
 function comments(state = [], action) {
 
 	// dispatch post comments to postComments() subreducer
@@ -39,4 +56,7 @@ function comments(state = [], action) {
 	return state;
 }
 
+/**
+ * Export
+ */
 export default comments;

@@ -6,7 +6,10 @@ import React from 'react';
 import Photo from './Photo';
 import Comments from './Comments';
 
-
+/**
+ * Component: Single
+ * Renders a single photo page
+ */
 const Single = React.createClass({
 	render() {
 
@@ -26,4 +29,7 @@ const Single = React.createClass({
 	}
 });
 
+/**
+ * Export
+ */
 export default Single

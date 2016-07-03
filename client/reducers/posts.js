@@ -1,11 +1,15 @@
-// a reducer takes in two things:
-
-// 1. the action (info about what happened)
-// 2. a copy of the current state
-
+/**
+ * Posts reducer
+ * @param 	state 	the current state
+ * @param 	action 	the called action
+ * @return 	state	the new state
+ */
 function posts(state = [], action) {
-	//alert("reducinnn");
+
+	// Check which action was called
 	switch(action.type) {
+
+		// Increment the amount of likes
 		case 'INCREMENT_LIKES' :
 			const i = action.index;
 			return [
@@ -14,9 +18,13 @@ function posts(state = [], action) {
 				...state.slice(i + 1)
 			];
 		
+		// Action wasn't meant for this reducer
 		default:
 			return state;
 	}
 }
 
+/**
+ * Export
+ */
 export default posts;

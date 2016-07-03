@@ -1,4 +1,4 @@
-// increment
+// increment the amount of likes
 export function increment(index) {
 	return {
 		type: 'INCREMENT_LIKES',
@@ -6,7 +6,7 @@ export function increment(index) {
 	}
 }
 
-// add comment
+// add a comment
 export function addComment(postId, author, comment) {
 	return {
 		type: 'ADD_COMMENT',
@@ -16,7 +16,7 @@ export function addComment(postId, author, comment) {
 	}
 }
 
-// remove comment
+// remove a comment
 export function removeComment(postId, index) {
 	return {
 		type: 'REMOVE_COMMENT',

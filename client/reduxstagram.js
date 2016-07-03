@@ -1,20 +1,25 @@
+/**
+ * Import framework
+ */
 import React from 'react';
-
 import { render } from 'react-dom';
-
-// import css
-import css from './styles/style.styl';
-
-// import components
-import App from './components/App';
-import Single from './components/Single';
-import PhotoGrid from './components/PhotoGrid';
-
-// import react router
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'; 
 import { Provider } from 'react-redux';
 import store, { history } from './store';
 
+/**
+ * Import CSS
+ */
+import css from './styles/style.styl';
+
+/**
+ * Import components
+ */
+import App from './components/App';
+import Single from './components/Single';
+import PhotoGrid from './components/PhotoGrid';
+
+// create router
 const router = (
 	<Provider store={store}>
 		<Router history={history}>
@@ -26,4 +31,5 @@ const router = (
 	</Provider>
 );
 
+// render
 render(router, document.getElementById('root'));
